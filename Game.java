@@ -18,9 +18,9 @@ public class Game {
     
             HashMap<Integer, Snakes> snakePositions = new HashMap<Integer, Snakes>();
             for (int i = 0; i < noOfSnakes; i++) {
-                String[] snakeArray = sc.nextLine().split(" ");
-                int start = Integer.parseInt(snakeArray[0]);
-                int end = Integer.parseInt(snakeArray[1]);
+                String[] snakeInput = sc.nextLine().split(" ");
+                int start = Integer.parseInt(snakeInput[0]);
+                int end = Integer.parseInt(snakeInput[1]);
                 Snakes snake = new Snakes(start, end);
                 snakePositions.put(start, snake);
             }
@@ -29,15 +29,13 @@ public class Game {
             HashMap<Integer, Ladders> ladderPositions = new HashMap<Integer, Ladders>();
     
             for (int i = 0; i < noOfLadders; i++) {
-                String[] ladderArray = sc.nextLine().split(" ");
-                int start = Integer.parseInt(ladderArray[0]);
-                int end = Integer.parseInt(ladderArray[1]);
+                String[] ladderInput = sc.nextLine().split(" ");
+                int start = Integer.parseInt(ladderInput[0]);
+                int end = Integer.parseInt(ladderInput[1]);
                 Ladders ladder = new Ladders(start, end);
                 ladderPositions.put(start, ladder);
             }
-    
             Queue<Player> playerTurns = new LinkedList<Player>();
-    
             System.out.println("Enter number of players");
             int noOfplayers = Integer.parseInt(sc.nextLine());
             System.out.println("Enter Players Name");
