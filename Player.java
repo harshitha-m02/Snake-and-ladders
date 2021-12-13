@@ -12,7 +12,7 @@ public class Player {
     }
 
     public int getLocation(){
-        return this.location;
+        return location;
     }
 
     public String getName() {
