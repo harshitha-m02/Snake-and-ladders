@@ -7,8 +7,8 @@ public class Player {
 
     }
 
-    public void setLocation(int loc) {
-        this.location = loc;
+    public void setLocation(int location) {
+        this.location = location;
     }
 
     public int getLocation(){
