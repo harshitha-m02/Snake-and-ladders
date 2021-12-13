@@ -9,16 +9,18 @@ public class Board {
     private HashMap<Integer, Ladders> ladders;
     private Queue<Player> playerTurn;
 
-    public Board(int size) {
+    public Board(int size, Queue<Player> playerTurn,Dice dice,HashMap<Integer, Snakes> snakes,HashMap<Integer, Ladders> ladders) {
+        this.dice = dice;
         this.size = size;
-        this.snakes = new HashMap<Integer,Snakes>();
-        this.ladders = new HashMap<Integer,Ladders>();
+        this.snakes = snakes;
+        this.ladders = ladders;
+        this.playerTurn = playerTurn;
     }
 
     public int getSize() {
         return size;
     }
-
+    
     public void gameStarts() {
         while (true) {
             Player playerNo = playerTurn.poll();
@@ -50,11 +52,3 @@ public class Board {
         }
     }
 }
-
-
-
-
-
-
-
-    
