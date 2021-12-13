@@ -36,8 +36,6 @@ public class Game {
                 ladderPositions.put(start, ladder);
             }
     
-            // Players input
-    
             Queue<Player> playerTurns = new LinkedList<Player>();
     
             System.out.println("Enter number of players");
@@ -49,7 +47,7 @@ public class Game {
                 playerTurns.add(p);
             }
     
-            Board board = new Board(boardSize);
+            Board board = new Board(boardSize,playerTurns,dice,snakePositions,ladderPositions);
             board.gameStarts();
     
         }
